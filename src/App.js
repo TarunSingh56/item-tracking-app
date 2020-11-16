@@ -41,6 +41,11 @@ const App = () => {
     setCardcategory([...cardcategory, category]);
   };
 
+  const deleteCategory = (categoryname) => {
+    const filterItems = cardcategory.filter((i) => i !== categoryname);
+    setCardcategory(filterItems);
+  };
+
   return (
     <div className="app">
       <Modal open={open} onClose={() => setOpen(false)}>
@@ -77,7 +82,7 @@ const App = () => {
         <>
           {cardcategory.map((cc) => (
             <div key={cc}>
-              <Card categoryname={cc} />
+              <Card categoryname={cc} deleteCategory={deleteCategory} />
             </div>
           ))}
         </>

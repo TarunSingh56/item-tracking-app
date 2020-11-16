@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './Card.css';
 import Content from './Content.js';
 import { Button, Input } from '@material-ui/core';
+import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
 
-const Card = ({ categoryname }) => {
+const Card = ({ categoryname, deleteCategory }) => {
   const [items, setItems] = useState([]);
   const [additem, setadditem] = useState('');
 
@@ -22,7 +23,14 @@ const Card = ({ categoryname }) => {
   return (
     <div className="card">
       <div>
-        <h2>{categoryname}</h2>
+        <div className="card__header">
+          <h2>{categoryname}</h2>
+          <CancelOutlinedIcon
+            onClick={() => deleteCategory(categoryname)}
+            className="card__deleteicon"
+          />
+        </div>
+
         <h3>
           <span>Total Items : {items.length}</span>
         </h3>

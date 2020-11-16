@@ -12,6 +12,10 @@
   justify-content: space-around;
   align-items: center;
 }
+.card__deleteicon:hover {
+  color: red;
+  cursor: pointer;
+}
 h2 {
   text-align: center;
   padding-top: 10px;
