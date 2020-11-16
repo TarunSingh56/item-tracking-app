@@ -1,0 +1,14 @@
+.content {
+  background-color: rgb(186, 239, 241);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+}
+.content__deleteicon:hover {
+  color: red;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.card {
+  background-color: white;
+  margin: 20px;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+h3 {
+  text-align: center;
+  background-color: rgb(196, 255, 226);
+  display: block;
+}
